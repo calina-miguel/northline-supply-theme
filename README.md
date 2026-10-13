@@ -15,5 +15,13 @@ Production: https://northline-supply-theme.vercel.app
 ## Stack
 
 - HTML, CSS, JavaScript
-- GitHub Pages hosting
+- Vercel hosting
+
+## Local Operations
+
+```bash
+npm run start
+```
+
+The application is served as a static storefront interface and can be deployed directly through Vercel.
 
