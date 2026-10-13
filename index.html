@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northline Supply Storefront Theme</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">Northline Supply</a>
+    <nav aria-label="Primary">
+      <a href="#sections">Sections</a>
+      <a href="#product">Product</a>
+      <a href="#liquid">Liquid</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Northline Supply storefront system</p>
+        <h1>Conversion-focused storefront sections for a Shopify OS 2.0 theme.</h1>
+        <p class="lede">Reusable Liquid sections, product-card logic, metafield-driven content, responsive merchandising, and theme-editor friendly controls for Northline Supply.</p>
+        <a class="button" href="#product">View product section</a>
+      </div>
+      <div class="product-card" aria-label="Featured product preview">
+        <div class="product-media"></div>
+        <div class="product-body">
+          <p class="tag">Bestseller</p>
+          <h2>Precision Pour Kettle</h2>
+          <p>Variable-flow spout, induction base, and walnut handle.</p>
+          <div class="price-row"><strong>$84.00</strong><span>Free shipping</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sections" class="band">
+      <h2>Theme sections</h2>
+      <div class="grid">
+        <article>
+          <h3>Announcement bar</h3>
+          <p>Configurable text, campaign link, and color scheme settings.</p>
+        </article>
+        <article>
+          <h3>Collection grid</h3>
+          <p>Responsive product cards with badges, sale states, and image ratio controls.</p>
+        </article>
+        <article>
+          <h3>Trust modules</h3>
+          <p>Schema-driven icon blocks for shipping, warranty, and support promises.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="product" class="product-section">
+      <div class="gallery" aria-label="Product gallery">
+        <button class="thumb active" data-color="copper">Copper</button>
+        <button class="thumb" data-color="graphite">Graphite</button>
+        <button class="thumb" data-color="cream">Cream</button>
+      </div>
+      <div class="details">
+        <p class="eyebrow">Product template</p>
+        <h2>Variant-aware product experience</h2>
+        <p>Buttons below control Shopify variant changes. The section updates product title, price, availability, and merchandising copy without page refresh.</p>
+        <div class="option-row" role="group" aria-label="Choose finish">
+          <button data-variant="copper" class="variant active">Copper</button>
+          <button data-variant="graphite" class="variant">Graphite</button>
+          <button data-variant="cream" class="variant">Cream</button>
+        </div>
+        <dl class="meta">
+          <div><dt>Selected finish</dt><dd id="finish">Copper</dd></div>
+          <div><dt>Price</dt><dd id="price">$84.00</dd></div>
+          <div><dt>Status</dt><dd id="status">In stock</dd></div>
+        </dl>
+        <button class="button cart">Add to cart</button>
+      </div>
+    </section>
+
+    <section id="liquid" class="band code-band">
+      <h2>Liquid-style implementation notes</h2>
+      <pre><code>{% schema %}
+{
+  "name": "Featured product story",
+  "settings": [
+    { "type": "product", "id": "featured_product", "label": "Product" },
+    { "type": "checkbox", "id": "show_badges", "label": "Show badges" }
+  ]
+}
+{% endschema %}</code></pre>
+    </section>
+  </main>
+
+  <footer>Northline Supply storefront theme system.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
